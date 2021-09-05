@@ -17,7 +17,7 @@ html {
 
 /* INSERITO DA ERIK */
 
-#bianco-e-nero {
+.bianco-e-nero {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
@@ -27,6 +27,60 @@ html {
     width:230px;
     height:230px;
 }
+
+.contenitore {
+    position: relative;
+    width: 50%;
+    object-fit: cover;
+    width:230px;
+    height:230px;
+  }
+
+.immagine {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .centro {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .contenitore:hover .immagine {
+    opacity: 0.3;
+  }
+  
+  .contenitore:hover .centro {
+    opacity: 1;
+  }
+  
+  .testo {
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+
+  #cambio-espressione {
+    background-image: url(/immagini/orso_normale.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+}
+  #cambio-espressione:hover {
+      background-image: url(/immagini/orso_sorpreso.png);
+      background-repeat: no-repeat;
+  }
 /* INSERITO DA ERIK */
 
 body {
@@ -63,7 +117,8 @@ a {
 }
 
 a:active, a:hover {
-    outline-width: 0
+    outline-width: 0;
+    color: #5FCDE4;
 }
 
 abbr[title] {

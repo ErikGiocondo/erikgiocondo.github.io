@@ -30,7 +30,6 @@ html {
 
 .contenitore {
     position: relative;
-    width: 50%;
     object-fit: cover;
     width:230px;
     height:230px;
@@ -63,7 +62,7 @@ html {
   }
   
   .testo {
-    background-color: #04AA6D;
+    background-color: #5fcde4ff;
     color: white;
     font-size: 16px;
     padding: 16px 32px;
@@ -81,6 +80,29 @@ html {
       background-image: url(/immagini/orso_sorpreso.png);
       background-repeat: no-repeat;
   }
+
+  .square {
+    float:left;
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
+}
+
+.img_1-1{background-image:url('immagini/erik_camicia.jpeg');}
+.img_1-2{background-image:url('immagini/erik_macchina.jpeg');}
+.img_1-3{background-image:url('immagini/erik_noccioline.jpg');}
+
+.img_2-1{background-image:url('immagini/erik_camicia.jpeg');}
+.img_2-2{background-image:url('immagini/erik_macchina.jpeg');}
+.img_2-3{background-image:url('immagini/erik_noccioline.jpg');}
+
+.img_3-1{background-image:url('immagini/erik_camicia.jpeg');}
+.img_3-2{background-image:url('immagini/erik_macchina.jpeg');}
+.img_3-3{background-image:url('immagini/erik_noccioline.jpg');}
 /* INSERITO DA ERIK */
 
 body {

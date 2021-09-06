@@ -118,17 +118,15 @@ li{
 }
 
 .img1{
-    background-image: url('immagini/erik_camicia.jpeg');
+    background-image: url('immagini/travel.png');
 }
 .img2{
-    background-image: url('immagini/erik_macchina.jpeg');
+    background-image: url('immagini/space.png');
 }
 .img3{
-    background-image: url('immagini/erik_occhiali.jpeg');
+    background-image: url('immagini/hotel.png');
 }
-.img4{
-    background-image: url('immagini/erik_noccioline.jpg');
-}
+
 
 
 /* INSERITO DA ERIK */
@@ -518,7 +516,8 @@ a {
     display: block;
     border: none;
     border-bottom: 1px solid #ccc;
-    width: 100%
+    width: 100%;
+    background-color: lightgray;
 }
 
 .w3-select {
@@ -1570,7 +1569,7 @@ a {
 
 .w3-white, .w3-hover-white:hover {
     color: #000!important;
-    background-color: #fff!important
+    background-color: lightgray!important
 }
 
 .w3-black, .w3-hover-black:hover {

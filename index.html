@@ -3,7 +3,7 @@
 <title>Erik "Giocondo" Mavillonio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="blueStyle.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="icon" 
@@ -18,13 +18,37 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
 </style>
 <body class="w3-black">
+  <script>
+    var path = ['progetto-weTourist.html', 'progetto-spaceOdissey.html', 'progetto-innKeeper.html']
 
+  function on(pagina) {
+    console.log(path[pagina]);
+    document.getElementById('ifr').src = path[pagina];
+    document.getElementById("overlay").style.display = "block";
+    }
+  
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+
+  function changeCss(cssLinkIndex) {
+    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+    var newlink = document.createElement("link");
+    var styles = ['blueStyle.css', 'redStyle.css', 'greenStyle.css'];
+    newlink.setAttribute("rel", "stylesheet");
+    newlink.setAttribute("type", "text/css");
+    newlink.setAttribute("href", 'greenStyle.css');
+
+    document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
+  }
+  </script>
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Avatar image in top left corner -->
-  <div id ="cambio-espressione"></div>
+  <div id ="cambio-espressione" onclick="changeCss(0)"></div>
   <!--<img src="immagini/orso_normale.png" style="width:100%">-->
   <a href="#" class="w3-bar-item w3-button w3-padding-large">
     <i class="fa fa-home w3-xxlarge"></i>
@@ -58,7 +82,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-padding-large" id="main">
   <!-- Header/Home -->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">Ciao!</span> Sono Erik ( ._.)</h1>
+    <h1 class="w3-jumbo">Ciao! Sono <span style="color: #5fcde4ff">Erik.</span></h1>
     <div>
       <img src="immagini/erik_macchina.jpeg" alt="erik" class="immagine-quadrata bianco-e-nero">
     </div>
@@ -66,7 +90,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
   <!-- About Section -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2 class="w3-text-light-grey">Erik Mavillonio</h2>
+    <h2 class="w3-text-light-grey">Erik "Giocondo" Mavillonio</h2>
     <hr style="width:200px" class="w3-opacity">
     <p>
         Sono laureando in <a href="http://www.scienzamedia.uniroma2.it/presentazione.php">Scienze e Tecnologia dei Media</a>:<br> 
@@ -77,35 +101,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         sviluppo e gestione di tool per il software di modellazione 3D Maya, sviluppo e progettazione di interfacce per la gestione del DB interno.
         <br><br>
         Recentemente ho cominciato ad approfondire nel tempo libero lo studio di Game Design, utilizzando le piattaforme Unity e Godot.
-
     </p>
-    <h3 class="w3-padding-16 w3-text-light-grey">Cosa so fare</h3>
-    <p class="w3-wide">Python</p>
-    <div class="w3-white">
-      <div class="colore-barre" style="height:28px;width:65%"></div>
-    </div>
-    <p class="w3-wide">Programmazione Web(HTML, CSS, Javascript)</p>
-    <div class="w3-white">
-      <div class="colore-barre" style="height:28px;width:40%"></div>
-    </div>
-    <p class="w3-wide">Java</p>
-    <div class="w3-white">
-      <div class="colore-barre" style="height:28px;width:55%"></div>
-    </div>
-    <p class="w3-wide">Photoshop</p>
-    <div class="w3-white">
-      <div class="colore-barre" style="height:28px;width:75%"></div>
-    </div>
-    <p class="w3-wide">Premiere Pro</p>
-    <div class="w3-white">
-      <div class="colore-barre" style="height:28px;width:70%"></div>
-    </div>
-    <br>
     
     <h2 class="w3-text-light-grey">Scarica il mio Curriculum Vitae nel dettaglio</h2>
     <a href="immagini/logo.jpeg" download>
     <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download" style="background-color: lightgrey;"></i> Scarica il curriculum
+      <i class="fa fa-download"></i> Scarica il curriculum
     </button>
     </a>
     
@@ -121,38 +122,36 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <div class="square bg img1">
       <div class="content">
-          <a href="#" style="text-decoration: none;">
             <div class="table">
-                <div class="table-cell">
+                <div class="table-cell" onclick="on(0)">
                     <h3 class="testo-progetto">WeTourist</h3>
                 </div>
             </div>
-        </a>
       </div>
     </div>
 
     <div class="square bg img2">
       <div class="content">
-        <a href="#" style="text-decoration: none;">
           <div class="table">
-              <div class="table-cell titolo-progetto testo">
+              <div class="table-cell" onclick="on(1)">
                 <h3 class="testo-progetto">Space Odissey</h3>
               </div>
           </div>
-        </a>
       </div>
     </div>
 
     <div class="square bg img3">
       <div class="content">
-        <a href="#" style="text-decoration: none;">
           <div class="table">
-              <div class="table-cell">
+              <div class="table-cell" onclick="on(2)">
                 <h3 class="testo-progetto">Inn Keeper</h3>
               </div>
           </div>
-        </a>
       </div>
+    </div>
+
+    <div id="overlay" onclick="off()">
+    <iframe id="ifr" src=""></iframe>
     </div>
 
   <!-- End Portfolio Section -->
@@ -165,9 +164,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
     <div class="w3-section">
       <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a href="mailto:erik.mavillonio@gmail.com?Subject=Ciao%20Erik!" target="_top">erik.mavillonio@gmail.com</a></p>
-      <p><i class="fa fa-instagram fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a href="https://www.instagram.com/erikgiocondo">@erikgiocondo</a></p>
-      <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a href="https://it.linkedin.com/in/erik-mavillonio-8839421b0">Erik Mavillonio</a></p>
-      <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a href="https://github.com/ErikGiocondo">ErikGiocondo</a></p>
+      <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a href="https://it.linkedin.com/in/erik-mavillonio-8839421b0" target="_blank">Erik Mavillonio</a></p>
+      <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a href="https://github.com/ErikGiocondo" target="_blank">ErikGiocondo</a></p>
     </div><br>
 
     <p>Contattami:</p>
@@ -178,7 +176,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       <p><input class="w3-input w3-padding-16" type="text" placeholder="Messaggio" required name="Message"></p>
       <p>
         <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane" style="background-color: lightgrey;"></i> INVIA IL MESSAGGIO
+          <i class="fa fa-paper-plane"></i> INVIA IL MESSAGGIO
         </button>
       </p>
     </form>

@@ -15,10 +15,45 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+
+/* Set the width of the sidebar to 120px */
+
+
+
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+
+#main {
+    margin-left: 120px
+}
+
+/* Remove margins from "page content" on small screens */
+
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0
+    }
+}
+
 /* INSERITO DA ERIK */
 
+#nome-colorato {
+    color: #5fcde4ff;
+}
+
+.pulsanti-laterali {
+    width: 25% !important;
+}
+
 .bianco-e-nero {
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
 }
 
@@ -29,8 +64,8 @@ html {
 
 .immagine-quadrata {
     object-fit: cover;
-    width:230px;
-    height:230px;
+    width: 230px;
+    height: 230px;
 }
 
 #cambio-espressione {
@@ -38,45 +73,50 @@ html {
     background-repeat: no-repeat;
     background-size: auto;
     width: 100%;
-    height: 0;
+    height: auto;
     padding-top: 100%;
     background-size: auto;
 }
+
 #cambio-espressione:hover {
     background-image: url(/immagini/orso_sorpreso.png);
     background-repeat: no-repeat;
     cursor: pointer;
-  }
+}
 
 .overflow {
     overflow: hidden;
 }
+
 .square {
-    float:left;
+    float: left;
     position: relative;
     width: 30%;
-    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
-    margin:1.66%;
-    background-color:#1E1E1E;
-    overflow:hidden;
+    padding-bottom: 30%;
+    /* = width for a 1:1 aspect ratio */
+    margin: 1.66%;
+    background-color: #1E1E1E;
+    overflow: hidden;
 }
 
 .content {
-    position:absolute;
-    height:100%; /* = 100% - 2*5% padding */
-    width:100%; /* = 100% - 2*5% padding */
-    
-}
-.table{
-    display:table;
-    width:100%;
-    height:100%;
+    position: absolute;
+    height: 100%;
+    /* = 100% - 2*5% padding */
+    width: 100%;
+    /* = 100% - 2*5% padding */
 }
 
-.table-cell{
-    display:table-cell;
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.table-cell {
+    display: table-cell;
     text-align: center;
-    vertical-align:middle;
+    vertical-align: middle;
 }
 
 .table-cell:hover {
@@ -94,43 +134,48 @@ html {
 }
 
 /*  For list */
-ul{
-    text-align:left;
-    margin:5% 0 0;
-    padding:0;
-    list-style-position:inside;
-}
-li{
-    margin: 0 0 0 5%;
-    padding:0;
+
+ul {
+    text-align: left;
+    margin: 5% 0 0;
+    padding: 0;
+    list-style-position: inside;
 }
 
+li {
+    margin: 0 0 0 5%;
+    padding: 0;
+}
 
 /*  For responsive images */
 
-.content .rs{
-    width:auto;
-    height:auto;
-    max-height:90%;
-    max-width:100%;
+.content .rs {
+    width: auto;
+    height: auto;
+    max-height: 90%;
+    max-width: 100%;
 }
+
 /*  For responsive images as background */
 
-.bg{
-    background-position:center center;
-    background-repeat:no-repeat;
-    background-size:cover; /* you change this to "contain" if you don't want the images to be cropped */
-    color:#fff;
+.bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* you change this to "contain" if you don't want the images to be cropped */
+    color: #fff;
 }
 
-.img1{
-    background-image: url('immagini/travel.png');
+.img1 {
+    background-image: url('../immagini/travel.png');
 }
-.img2{
-    background-image: url('immagini/space.png');
+
+.img2 {
+    background-image: url('../immagini/space.png');
 }
-.img3{
-    background-image: url('immagini/hotel.png');
+
+.img3 {
+    background-image: url('../immagini/hotel.png');
 }
 
 #overlay {
@@ -142,10 +187,33 @@ li{
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer;
-  }
+}
+
+#box-progetto {
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    margin: auto;
+    padding-top: 56.25%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid gray;
+}
+
+textarea {
+    height: 200px;
+}
 
 /* INSERITO DA ERIK */
 
@@ -586,8 +654,9 @@ a {
 
 .w3-sidebar {
     height: 100%;
-    width: 200px;
+    width: 120px;
     background-color: #fff;
+    background: #222;
     position: fixed!important;
     z-index: 1;
     overflow: auto

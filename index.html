@@ -1,198 +1,183 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Erik "Giocondo" Mavillonio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="blueStyle.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="icon" 
-      type="image/png" 
-      href="immagini/favicon.png">
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-
-</style>
+<link rel="stylesheet" type="text/css" href="css/blueStyle.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="immagini/favicon.png">
+</head>
 <body class="w3-black">
-  <script>
-    var path = ['progetto-weTourist.html', 'progetto-spaceOdissey.html', 'progetto-innKeeper.html']
+  <script type="text/javascript"src="javascript/azioni.js"></script>
 
-  function on(pagina) {
-    console.log(path[pagina]);
-    document.getElementById('ifr').src = path[pagina];
-    document.getElementById("overlay").style.display = "block";
-    }
-  
-  function off() {
-    document.getElementById("overlay").style.display = "none";
-  }
-
-  function changeCss(cssLinkIndex) {
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
-    var newlink = document.createElement("link");
-    var styles = ['blueStyle.css', 'redStyle.css', 'greenStyle.css'];
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", 'greenStyle.css');
-
-    document.getElementsByTagName("head").item(cssLinkIndex).replaceChild(newlink, oldlink);
-  }
-  </script>
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <div id ="cambio-espressione" onclick="changeCss(0)"></div>
-  <!--<img src="immagini/orso_normale.png" style="width:100%">-->
-  <a href="#" class="w3-bar-item w3-button w3-padding-large">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>SU DI ME</p>
-  </a>
-  <a href="#projects" class="w3-bar-item w3-button w3-padding-large">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PROGETTI</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTATTI</p>
-  </a>
-</nav>
-
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">SU DI ME</a>
-    <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROGETTI</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTATTI</a>
-  </div>
-</div>
-
-<!-- Page Content -->
-<div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo">Ciao! Sono <span style="color: #5fcde4ff">Erik.</span></h1>
-    <div>
-      <img src="immagini/erik_macchina.jpeg" alt="erik" class="immagine-quadrata bianco-e-nero">
-    </div>
-  </header>
-
-  <!-- About Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
-    <h2 class="w3-text-light-grey">Erik "Giocondo" Mavillonio</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>
-        Sono laureando in <a href="http://www.scienzamedia.uniroma2.it/presentazione.php">Scienze e Tecnologia dei Media</a>:<br> 
-        corso di studi interdisciplinare caratterizzato in egual misura da una rigorosa preparazione tecnico-scientifica e uno studio dei nuovi territori 
-        dei media e della comunicazione. In particolare ho deciso di approfondire il percorso di studi in "comunicazione via Web".
-        <br><br>
-        Ho svolto un tirocinio interno presso <a href="https://www.rbw-cgi.it/">Rainbow CGI</a>:<br>
-        sviluppo e gestione di tool per il software di modellazione 3D Maya, sviluppo e progettazione di interfacce per la gestione del DB interno.
-        <br><br>
-        Recentemente ho cominciato ad approfondire nel tempo libero lo studio di Game Design, utilizzando le piattaforme Unity e Godot.
-    </p>
-    
-    <h2 class="w3-text-light-grey">Scarica il mio Curriculum Vitae nel dettaglio</h2>
-    <a href="immagini/logo.jpeg" download>
-    <button class="w3-button w3-light-grey w3-padding-large w3-section">
-      <i class="fa fa-download"></i> Scarica il curriculum
-    </button>
+  <!-- Icon Bar (Sidebar - hidden on small screens) -->
+  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+    <!-- Avatar image in top left corner -->
+    <div id="cambio-espressione" onclick="changeCss(0)"></div>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">
+      <i class="fa fa-home w3-xxlarge"></i>
+      <p>HOME</p>
     </a>
-    
-  <!-- End About Section -->
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large">
+      <i class="fa fa-user w3-xxlarge"></i>
+      <p>SU DI ME</p>
+    </a>
+    <a href="#projects" class="w3-bar-item w3-button w3-padding-large">
+      <i class="fa fa-eye w3-xxlarge"></i>
+      <p>PROGETTI</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">
+      <i class="fa fa-envelope w3-xxlarge"></i>
+      <p>CONTATTI</p>
+    </a>
+  </nav>
+
+  <!-- Navbar on small screens (Hidden on medium and large screens) -->
+  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+      <a href="#" class="w3-bar-item w3-button pulsanti-laterali">HOME</a>
+      <a href="#about" class="w3-bar-item w3-button">SU DI ME</a>
+      <a href="#projects" class="w3-bar-item w3-button">PROGETTI</a>
+      <a href="#contact" class="w3-bar-item w3-button">CONTATTI</a>
+    </div>
   </div>
-  
-  <!-- Portfolio Section -->
-  <div class="w3-content w3-justify w3-text-grey w3-padding-32 overflow" id ="projects">
-    <h2 class="w3-text-light-grey">I miei Progetti</h2>
-    <hr style="width:200px" class="w3-opacity">
 
-    <!-- 1st row verticaly centered text in the square columns -->
-
-    <div class="square bg img1">
-      <div class="content">
-            <div class="table">
-                <div class="table-cell" onclick="on(0)">
-                    <h3 class="testo-progetto">WeTourist</h3>
-                </div>
-            </div>
+  <!-- Page Content -->
+  <div class="w3-padding-large" id="main">
+    <!-- Header/Home -->
+    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+      <h1 class="w3-jumbo">Ciao! Sono <span id="nome-colorato">Erik.</span></h1>
+      <div>
+        <img src="immagini/erik_occhiali.jpeg" alt="erik" class="immagine-quadrata bianco-e-nero">
       </div>
-    </div>
+    </header>
 
-    <div class="square bg img2">
-      <div class="content">
-          <div class="table">
-              <div class="table-cell" onclick="on(1)">
-                <h3 class="testo-progetto">Space Odissey</h3>
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div class="square bg img3">
-      <div class="content">
-          <div class="table">
-              <div class="table-cell" onclick="on(2)">
-                <h3 class="testo-progetto">Inn Keeper</h3>
-              </div>
-          </div>
-      </div>
-    </div>
-
-    <div id="overlay" onclick="off()">
-    <iframe id="ifr" src=""></iframe>
-    </div>
-
-  <!-- End Portfolio Section -->
-  </div>
-  
-  <!-- Contact Section -->
-  <div class="w3-padding-32 w3-content w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">I miei contatti</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-section">
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a href="mailto:erik.mavillonio@gmail.com?Subject=Ciao%20Erik!" target="_top">erik.mavillonio@gmail.com</a></p>
-      <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a href="https://it.linkedin.com/in/erik-mavillonio-8839421b0" target="_blank">Erik Mavillonio</a></p>
-      <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a href="https://github.com/ErikGiocondo" target="_blank">ErikGiocondo</a></p>
-    </div><br>
-
-    <p>Contattami:</p>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Soggetto" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Messaggio" required name="Message"></p>
+    <!-- About Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32" id="about">
+      <h2 class="w3-text-light-grey">Erik "Giocondo" Mavillonio</h2>
+      <hr class="w3-opacity">
       <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> INVIA IL MESSAGGIO
-        </button>
+        Sono laureando in <a href="http://www.scienzamedia.uniroma2.it/presentazione.php" target="_blank">Scienze e Tecnologia dei
+          Media</a>:<br>
+        corso di studi interdisciplinare caratterizzato in egual misura da una rigorosa preparazione tecnico-scientifica
+        e uno studio dei nuovi territori
+        dei media e della comunicazione. In particolare ho deciso di approfondire il percorso di studi in "comunicazione
+        via Web".
+        <br><br>
+        Ho svolto un tirocinio interno presso <a href="https://www.rbw-cgi.it/" target="_blank">Rainbow CGI</a>:<br>
+        sviluppo e gestione di tool per il software di modellazione 3D Maya, sviluppo e progettazione di interfacce per
+        la gestione del DB interno.
+        <br><br>
+        Recentemente ho cominciato ad approfondire nel tempo libero lo studio di Game Design, utilizzando le piattaforme
+        Unity e Godot.
       </p>
-    </form>
-  <!-- End Contact Section -->
-  </div>
-  
+
+      <!-- Curriculum Download -->
+      <h2 class="w3-text-light-grey">Scarica il mio Curriculum Vitae nel dettaglio</h2>
+      <a href="immagini/logo.jpeg" download>
+        <button class="w3-button w3-light-grey w3-padding-large w3-section">
+          <i class="fa fa-download"></i> Scarica il curriculum
+        </button>
+      </a>
+
+      <!-- End About Section -->
+    </div>
+
+    <!-- Portfolio Section -->
+    <div class="w3-content w3-justify w3-text-grey w3-padding-32 overflow" id="projects">
+      <h2 class="w3-text-light-grey">I miei Progetti</h2>
+      <hr class="w3-opacity">
+
+      <!-- 1st row verticaly centered text in the square columns -->
+
+      <div class="square bg img1">
+        <div class="content">
+          <div class="table">
+            <div class="table-cell" onclick="on(0)">
+              <h3 class="testo-progetto">WeTourist</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="square bg img2">
+        <div class="content">
+          <div class="table">
+            <div class="table-cell" onclick="on(1)">
+              <h3 class="testo-progetto">Space Odissey</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="square bg img3">
+        <div class="content">
+          <div class="table">
+            <div class="table-cell" onclick="on(2)">
+              <h3 class="testo-progetto">Inn Keeper</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="overlay" onclick="off()">
+        <div id="box-progetto">
+          <iframe id="ifr" src=""></iframe>
+        </div>
+      </div>
+      <!-- New project rows here -->
+
+
+      <!-- End Portfolio Section -->
+    </div>
+
+    <!-- Contact Section -->
+    <div class="w3-padding-32 w3-content w3-text-grey" id="contact">
+      <h2 class="w3-text-light-grey">I miei contatti</h2>
+      <hr class="w3-opacity">
+
+      <div class="w3-section">
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i><a
+            href="mailto:erik.mavillonio@gmail.com?Subject=Ciao%20Erik!" target="_top">erik.mavillonio@gmail.com</a></p>
+        <p><i class="fa fa-linkedin fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a
+            href="https://it.linkedin.com/in/erik-mavillonio-8839421b0" target="_blank">Erik Mavillonio</a></p>
+        <p><i class="fa fa-github fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i><a
+            href="https://github.com/ErikGiocondo" target="_blank">ErikGiocondo</a></p>
+      </div><br>
+
+      <h3 class="w3-text-light-grey">Contattami:</h3>
+      <form action="https://formspree.io/f/mvodddzq" method="POST" target="_blank">
+        <label>Il tuo nome</label>
+        <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name"></p>
+        <label>La tua email</label>
+        <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" name="_replyto"></p>
+        <label>Il tuo messaggio</label>
+        <p><textarea class="w3-input w3-padding-16" type="text" placeholder="Messaggio" required
+            name="Message"></textarea></p>
+        <p>
+          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <i class="fa fa-paper-plane"></i> INVIA IL MESSAGGIO
+          </button>
+        </p>
+      </form>
+
+      <!-- End Contact Section -->
+    </div>
+
     <!-- Footer -->
+    <footer class="w3-content w3-padding-32 w3-text-grey w3-xlarge">
+      <p class="w3-tiny">Powered by 
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+      </p>
+      <!-- End footer -->
+    </footer>
 
-  
-  <footer class="w3-content w3-padding-32 w3-text-grey w3-xlarge">
-    <p class="w3-tiny">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-  <!-- End footer -->
-  </footer>
-
-<!-- END PAGE CONTENT -->
-</div>
+    <!-- END PAGE CONTENT -->
+  </div>
 
 </body>
+
 </html>

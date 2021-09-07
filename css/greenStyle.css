@@ -15,16 +15,44 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+
+/* Set the width of the sidebar to 120px */
+
+
+
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+
+#main {
+    margin-left: 120px
+}
+
+/* Remove margins from "page content" on small screens */
+
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0
+    }
+}
+
 /* INSERITO DA ERIK */
 
+#nome-colorato {
+    color: green;
+}
+
+.pulsanti-laterali {
+    width: 25% !important;
+}
 .bianco-e-nero {
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
-}
-
-.colore-barre {
-    color: #fff!important;
-    background-color: #357482ff!important
 }
 
 .immagine-quadrata {
@@ -34,16 +62,17 @@ html {
 }
 
 #cambio-espressione {
-    background-image: url(/immagini/frog.png);
+    background-image: url(/immagini/alieno_normale.png);
     background-repeat: no-repeat;
     background-size: auto;
     width: 100%;
-    height: 0;
+    height: auto;
     padding-top: 100%;
-    background-size: 64px 64px;
+    background-size: auto;
 }
+
 #cambio-espressione:hover {
-    background-image: url(/immagini/frog.png);
+    background-image: url(/immagini/alieno_felice.png);
     background-repeat: no-repeat;
     cursor: pointer;
   }
@@ -88,7 +117,7 @@ html {
 
 .testo-progetto {
     background-color: rgba(11, 23, 26, 0.8);
-    color: #5fcde4ff;
+    color: green;
     padding-top: 12px;
     padding-bottom: 12px;
 }
@@ -124,13 +153,13 @@ li{
 }
 
 .img1{
-    background-image: url('immagini/travel.png');
+    background-image: url('../immagini/travel.png');
 }
 .img2{
-    background-image: url('immagini/space.png');
+    background-image: url('../immagini/space.png');
 }
 .img3{
-    background-image: url('immagini/hotel.png');
+    background-image: url('../immagini/hotel.png');
 }
 
 #overlay {
@@ -147,6 +176,28 @@ li{
     cursor: pointer;
   }
 
+#box-progetto {
+    position: relative;
+    overflow: hidden;
+    width: 60%;
+    margin: auto;
+    padding-top: 56.25%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid gray;
+}
+
+textarea {
+    height: 200px;
+}
 /* INSERITO DA ERIK */
 
 body {
@@ -184,7 +235,7 @@ a {
 
 a:active, a:hover {
     outline-width: 0;
-    color: green;
+    color: lightgreen;
 }
 
 abbr[title] {
@@ -586,8 +637,9 @@ a {
 
 .w3-sidebar {
     height: 100%;
-    width: 200px;
+    width: 120px;
     background-color: #fff;
+    background: #222;
     position: fixed!important;
     z-index: 1;
     overflow: auto

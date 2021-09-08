@@ -43,6 +43,16 @@ body, h1, h2, h3, h4, h5, h6 {
 
 /* INSERITO DA ERIK */
 
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
 #nome-colorato {
     color: #5fcde4ff;
 }
